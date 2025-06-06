@@ -1,4 +1,7 @@
 pandas
-ipykernel
 seaborn
 matplotlib
+numpy
+scikit-learn
+imbalanced-learn
+ipykernel
