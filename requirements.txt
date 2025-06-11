@@ -5,3 +5,4 @@ numpy
 scikit-learn
 imbalanced-learn
 ipykernel
+import-ipynb
