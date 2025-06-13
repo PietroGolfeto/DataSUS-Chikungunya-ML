@@ -53,6 +53,7 @@ numpy
 scikit-learn
 imbalanced-learn
 ipykernel
+import-ipynb
 ```
 
 ### Project Structure
@@ -70,12 +71,30 @@ Before running the notebooks, you need to set up the data directories. The noteb
 ├── part_1_preprocessing.ipynb
 ├── part_2_training.ipynb
 ├── part_3_fairness.ipynb
+├── plots.ipynb
 └── README.md
 ```
 
-**Important:** You must update the file paths at the beginning of the notebooks to match your system. The notebooks are designed to run sequentially, with each part depending on the output files from the previous one.
+### Configuration
+At the beginning of each notebook part, you must add a path dictionary for your own system. Find the cell with the pietro_path and leandro_path dictionaries and add your own, like this:
+```python
+# Add your own path dictionary here
+your_name_path = {
+    'sinan_path': '/path/to/your/source/csv/',
+    'cleaned_path': '/path/to/your/datasets/',
+    'train_path': '/path/to/your/datasets/train.csv',
+}
 
----
+# Then, add your path to the `if/elif` check
+if os.path.isdir(pietro_path['sinan_path']):
+    path = pietro_path
+elif os.path.isdir(leandro_path['sinan_path']):
+    path = leandro_path
+elif os.path.isdir(your_name_path['sinan_path']): # Add this line
+    path = your_name_path
+else:
+    raise Exception('Path not found. Please check the paths in the script.')
+```
 
 ## 4. Part 1: Preprocessing and Exploratory Data Analysis
 

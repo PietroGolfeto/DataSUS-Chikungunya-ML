@@ -1,7 +1,8 @@
-pandas
-seaborn
-matplotlib
-numpy
-scikit-learn
-imbalanced-learn
-ipykernel
+pandas==2.2.3
+seaborn==0.13.2
+matplotlib==3.10.1
+numpy==2.1.3
+scikit-learn==1.6.1
+imbalanced-learn==0.13.0
+ipykernel==6.29.5
+import-ipynb==0.2
